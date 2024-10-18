@@ -9,95 +9,71 @@ body {
     color: #333;
     margin: 0 auto;
 }
-/*header*/
-
+/* Header */
 header {
-    background-color: #082b53;
+    background-color: #0050ac;
     color: white;
-    padding: 0 0 20px 0;
+    padding: 10px;
     text-align: center;
-}
-/* logo */
-header .logo h1{
-    text-align: left;
-    font-size: 20px;
-    margin: 0;
-    font-family: Script Fonts;
-    font-weight: bold;
-}
-nav+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
 }
-nav a.home{
+header .logo {
+    margin-left: 20px;
+}
+header .logo h1 {
+    text-align: left;
+    font-size: 40px;
+    margin: 0;
+    font-family: 'Script Fonts';
+    font-weight: bold;
+}
+nav a.home {
     color: #fff;
     font-weight: bold;
 }
-nav ul{
+header nav ul {
     list-style: none;
-    text-align: right;
-    padding: 20px 30px 0 0; 
-    border-radius: 5px;
+    display: flex;
+    margin: 0;
+    padding: 0;
 }
-
-nav ul li:nth-of-type(2) a{
-    background-color: #007BFF;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 5px;
+header nav ul li {
+    margin-left: 20px;
 }
-nav li{
-    display: inline-block;
-    padding: 5px;
-    font-size: 20px;
-}
-nav a{
+header nav ul li a {
     text-decoration: none;
     color: white;
+    font-size: 18px;
 }
-nav a:hover{
+header nav ul li a:hover {
     color: rgb(87, 87, 172);
 }
-/*đăng ký*/
-.register-button{
+/* Đăng ký & đăng nhập */
+.register-button, .login-button {
     padding: 8px 16px;
     background-color: #28a745;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
     color: white;
     font-size: 16px;
     cursor: pointer;
+    margin-left: 10px;
 }
-/*đăng nhập*/
-.login-button{
-    padding: 8px 16px;
-    background-color: #28a745;
-    border: none;
-    border-radius: 10px;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-}
-.login-button:hover,.register-button:hover {
+.login-button:hover, .register-button:hover {
     background-color: #218838;
 }
-.loginregister a:nth-of-type(1){
-    margin-right: 5px;
-}
-.loginregister{
-    margin-right: 80px;   
-}
-/*thanh tìm kiếm*/
-.search {
+.loginregister {
     display: flex;
     align-items: center;
-    margin-right: auto;
-    margin-left: 80px;
+    margin-right: 20px;
+}
+/* Thanh tìm kiếm */
+.search {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
 }
 .search-input {
     padding: 5px 10px;
@@ -121,23 +97,85 @@ nav a:hover{
 .search-button:hover {
     background-color: #0056b3;
 }
-/*----------------------------------------------------------------------------*/
-.background{
+/* Background image */
+.background {
     text-align: center;
     margin-top: 20px;
 }
-.background img{
+.background img {
     width: auto;
     border: 0 solid #fff;
     border-radius: 20px;
     object-fit: cover;
 }
-footer{
+/* Footer */
+footer {
     text-align: center;
-    background-color: #082b53;
+    background-color: #0050ac;
     padding: 20px;
     color: white;
     width: 100%;
     position: fixed;
     bottom: 0;
+}
+.slideshow-container {
+    position: relative;
+    max-width: 960px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+}
+.mySlides {
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.mySlides.active {
+    display: block;
+    opacity: 1;
+}
+.mySlides img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+}
+.next {
+    right: 0;
+}
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+@keyframes fade {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+}
+.dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+    background-color: #717171;
 }
