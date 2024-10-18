@@ -7,8 +7,45 @@
     <link rel="stylesheet" href="stylesinventory.css">
 </head>
 <body>
-    <h1>Inventory Management</h1>
+    <header>
+        <div class="logo">
+            <h1>Warehouse</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="home">Home</a></li>
+                <li><a href="#">Supplier</a></li>
+                <li><a href="#">Customer</a>
+                    <div class="">
+                        <a href="customerIN.html">Domestic</a>
+                        <a href="customerOUT.html">Foreign</a>
+                    </div>
+                </li>
+                <li><a href="#">Order</a></li>
+            <div class="dropdown">
+                <li><a href="#">Inventory</a>
+                    <div class="#">
+                         <a href="inventoryIM.html">Import</a>
+                         <a href="inventoryEX.html">Export</a>
+                    </div>
+                </li>
+            </div>
+                <li><a href="#">Reports</a></li>
+                <li><a href="#">Employee</a></li>
+            </ul>
+        </nav>
+        <div class=""></div>
+        <nav>
 
+            <!--đăng nhập/đăng ký-->
+            <div class="loginregister">
+                <a href="register.html"> <button class="register-button">Đăng ký</button></a>
+                <a href="login.html"><button class="login-button">Đăng nhập</button></a>
+            </div>
+        </nav>
+    </header>
+    <main>
+    <h1>Inventory Management</h1>
     <!-- Import Form -->
     <div class="form-container">
         <h2>Import</h2>
@@ -39,5 +76,6 @@
         </div>
     </div>
     <script src="inventory.js"></script>
+</main>
 </body>
 </html>
