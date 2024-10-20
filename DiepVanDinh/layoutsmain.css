@@ -81,7 +81,7 @@ header nav ul li a:hover {
     text-align: center;
     justify-content: center; /* Canh giữa thanh tìm kiếm */
     margin: 20px auto; /* Canh giữa và tạo khoảng trống phía trên, dưới */
-    width: 60%; /* Điều chỉnh độ rộng phù hợp */
+    width: 30%; /* Điều chỉnh độ rộng phù hợp */
 }
 
 .search-input {
