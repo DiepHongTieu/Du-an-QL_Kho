@@ -73,39 +73,47 @@ header nav ul li a:hover {
 }
 /* Thanh tìm kiếm */
 .search {
+    position: absolute; /*Đặt thanh tìm kiếm lên trên ảnh */
+    top: 22%;
+    left: 50%;
+    transform: translate(-50%, -50%); /*Dịch chuyển để đặt chính giữa*/
     display: flex;
-    justify-content: center;
-    margin: 20px 0;
+    text-align: center;
+    justify-content: center; /* Canh giữa thanh tìm kiếm */
+    margin: 20px auto; /* Canh giữa và tạo khoảng trống phía trên, dưới */
+    width: 60%; /* Điều chỉnh độ rộng phù hợp */
 }
+
 .search-input {
-    padding: 5px 10px;
-    border-radius: 15px;
-    border: 1px solid #ccc;
-    outline: none;
-    font-size: 14px;
-    margin-right: 5px;
+    padding: 10px 20px; /* Điều chỉnh kích thước vừa phải */
+    font-size: 20px; /* Chữ lớn hơn cho dễ đọc */
+    border-radius: 25px; /* Góc bo tròn hơn */
+    width: 50%; /* Điều chỉnh độ rộng của ô nhập liệu */
 }
-.search-input:focus {
-    border-color: #007BFF;
-}
+
 .search-button {
-    padding: 5px 10px;
-    border: none;
-    border-radius: 15px;
+    padding: 5px 10px; /* Nút tìm kiếm lớn hơn */
+    border-radius: 25px;
     background-color: #007BFF;
     color: white;
     cursor: pointer;
+    margin-left: 10px;
 }
+
 .search-button:hover {
     background-color: #0056b3;
 }
 /* Background image */
 .background {
+    width: 100%;
     text-align: center;
     margin-top: 20px;
+    object-fit: cover;
 }
 .background img {
-    width: auto;
+    padding-top: 40px;
+    width: 100%;
+    height: auto;
     border: 0 solid #fff;
     border-radius: 20px;
     object-fit: cover;
