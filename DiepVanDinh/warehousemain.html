@@ -5,19 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Warehouse Management Dashboard</title>
     <link rel="stylesheet" href="layoutsmain.css">
-    <link rel="Inventory" href="./stylesinventory.css">
+    <link rel="stylesheet" href="./stylesinventory.css">
+    <link rel="stylesheet" href="./stylecustomer.css">
 </head>
 <body>
     <header>
         <div class="logo">
-            <h1>Warehouse</h1>
+            <img src="imagewarehouse/logokho.jpg" alt="Khong hien thi" class="logo-img">
         </div>
         <nav>
             <ul>
                 <li><a href="#" class="home">Home</a></li>
                 <li><a href="#">Supplier</a></li>
                 <li><a href="#">Customer</a>
-                    <div class="">
+                    <div class="customer-menu">
                         <a href="customerIN.html">Domestic</a>
                         <a href="customerOUT.html">Foreign</a>
                     </div>
@@ -25,7 +26,7 @@
                 <li><a href="#">Order</a></li>
             <div class="dropdown">
                 <li><a href="#">Inventory</a>
-                    <div class="#">
+                    <div class="inventory-menu">
                          <a href="inventoryIM.html">Import</a>
                          <a href="inventoryEX.html">Export</a>
                     </div>
@@ -40,16 +41,16 @@
 
             <!--đăng nhập/đăng ký-->
             <div class="loginregister">
-                <a href="register.html"> <button class="register-button">Đăng ký</button></a>
-                <a href="login.html"><button class="login-button">Đăng nhập</button></a>
+                <a href="register.html"> <button class="register-button">Register</button></a>
+                <a href="login.html"><button class="login-button">Login</button></a>
             </div>
         </nav>
     </header>
 <main>
     <!--tìm kiếm-->
     <div class="search">
-                <input type="text" placeholder="Tìm kiếm..." class="search-input">
-                <button type="submit" class="search-button">Tìm kiếm</button>
+                <input type="text" placeholder="Search..." class="search-input">
+                <button type="submit" class="search-button">Search</button>
             </div>
     <div class="background">
         <img src="kho1.jpg" alt="">

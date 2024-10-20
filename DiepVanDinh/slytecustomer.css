@@ -61,17 +61,6 @@ h3 {
     margin-top: 20px;
 }
 }
-* {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f4;
-        color: #333;
-        margin: 0 auto;
-    }
     * {
         margin: 0;
         padding: 0;
