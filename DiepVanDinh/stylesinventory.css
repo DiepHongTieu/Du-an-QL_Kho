@@ -18,8 +18,6 @@ body {
     height: auto;
 }
 nav ul {
-    box-sizing: border-box;
-    background-color: #ddd;
     border-radius: 5px;
     list-style-type: none;
     padding: 0;
@@ -38,11 +36,9 @@ nav ul li {
     top: 100%;
     left: 0;
     background-color: white;
-    border: 1px solid #ddd;
 }
 nav ul li:hover .customer-menu,
 nav ul li:hover .inventory-menu {
-    border: #ddd;
     border-radius: 10px;
     display: block;
     box-sizing: content-box;
