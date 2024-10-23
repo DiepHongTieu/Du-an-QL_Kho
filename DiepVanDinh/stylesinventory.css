@@ -1,307 +1,67 @@
-main{
-    body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-    background-color: #f4f4f4;
-}
-
-    h1 {
-    text-align: center;
-    color: #333;
-}
-
-    .form-container {
-    background-color: #fff;
-    padding: 20px;
-    margin: 20px auto;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-}
-
-h2 {
-    font-size: 10px;
-    text-align: center;
-    color: #444;
-}
-
-    label {
-    display: block;
-    margin: 10px 0 5px;
-}
-
-    input[type="text"], input[type="number"], input[type="date"], textarea {
-    width: 100%;
-    padding: 8px;
-    margin: 5px 0;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-}
-
-    button {
-    width: 100%;
-    padding: 10px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-    button:hover {
-    background-color: #218838;
-}
-
-    h3 {
-    text-align: center;
-    color: #555;
-    margin-top: 20px;
-    }
-}
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    margin: 0 auto;
+    background-color: #f4f4f4; /* Soft background color */
 }
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    margin: 0 auto;
-}
-/* Header */
-header {
-    background-color: #0050ac;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.logo-img {
+.content-wrapper {
     max-width: 100%;
-    height: auto;
-    object-fit: contain;
-}
-header .logo h1 {
-    text-align: left;
-    font-size: 40px;
-    margin: 0;
-    font-family: 'Script Fonts';
-    font-weight: bold;
-}
-nav a.home {
-    color: #fff;
-    font-weight: bold;
-}
-header nav ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-header nav ul li {
-    margin-left: 20px;
-}
-header nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-}
-header nav ul li a:hover {
-    color: rgb(87, 87, 172);
-}
-/* Đăng ký & đăng nhập */
-.register-button, .login-button {
-    padding: 8px 16px;
-    background-color: #28a745;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    margin-left: 10px;
-}
-.login-button:hover, .register-button:hover {
-    background-color: #218838;
-}
-.loginregister {
-    display: flex;
-    align-items: center;
-    margin-right: 20px;
-}
-/* Thanh tìm kiếm */
-.search {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-}
-.search-input {
-    padding: 5px 10px;
-    border-radius: 15px;
-    border: 1px solid #ccc;
-    outline: none;
-    font-size: 14px;
-    margin-right: 5px;
-}
-.search-input:focus {
-    border-color: #007BFF;
-}
-.search-button {
-    padding: 5px 10px;
-    border: none;
-    border-radius: 15px;
-    background-color: #007BFF;
-    color: white;
-    cursor: pointer;
-}
-.search-button:hover {
-    background-color: #0056b3;
-}
-/* Background image */
-.background {
-    text-align: center;
-    margin-top: 20px;
-}
-.background img {
-    width: auto;
-    border: 0 solid #fff;
-    border-radius: 20px;
-    object-fit: cover;
-}
-/* Footer */
-footer {
-    text-align: center;
-    background-color: #0050ac;
-    padding: 20px;
-    color: white;
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-}
-.slideshow-container {
-    position: relative;
-    max-width: 960px;
-    margin: auto;
+    margin: 0 auto;
+    padding: auto;
     background-color: #fff;
     border-radius: 10px;
-    overflow: hidden;
-    aspect-ratio: 16 / 9;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
-.mySlides {
-    display: none;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
+.logo {
+    text-align: center;
+    margin-bottom: 20px;
 }
-.mySlides.active {
-    display: block;
-    opacity: 1;
-}
-.mySlides img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: background-color 0.3s ease;
-    background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 3px;
-}
-.next {
-    right: 0;
-}
-.prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.7);
-}
-@keyframes fade {
-    from { opacity: 0.4; }
-    to { opacity: 1; }
-}
-.dot {
-    cursor: pointer;
-    height: 10px;
-    width: 10px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-.active, .dot:hover {
-    background-color: #717171;
-}
-
-/* Đảm bảo logo vừa khung chứa */
 .logo-img {
-    max-width: 150px; /* Điều chỉnh chiều rộng tối đa */
-    max-height: 100px; /* Điều chỉnh chiều cao tối đa */
+    max-width: 150px;
     height: auto;
-    object-fit: contain;
 }
-
-/* Định dạng menu Khách Hàng */
-.customer-menu {
+nav ul {
+    box-sizing: border-box;
+    background-color: #ddd;
+    border-radius: 5px;
+    list-style-type: none;
+    padding: 0;
     display: flex;
-    flex-direction: column;
-    margin-top: 5px;
-}
+    justify-content: center;
+    gap: 25px;
+    font-size: 25px;
 
-.customer-menu a {
-    margin-bottom: 5px;
-    text-decoration: none;
-    color: #333;
 }
-
-.customer-menu a:hover {
-    color: #0056b3;
+nav ul li {
+    position: relative;
 }
-
-/* Định dạng menu Kho */
-.inventory-menu {
-    display: flex;
-    flex-direction: column;
-    margin-top: 5px;
+.customer-menu, .inventory-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ddd;
 }
-
-.inventory-menu a {
-    margin-bottom: 5px;
-    text-decoration: none;
-    color: #333;
+nav ul li:hover .customer-menu,
+nav ul li:hover .inventory-menu {
+    border: #ddd;
+    border-radius: 10px;
+    display: block;
+    box-sizing: content-box;
 }
-
-.inventory-menu a:hover {
-    color: #0056b3;
+#importLink, #exportLink {
+    display: none;
 }
-
-/* Đảm bảo hình nền và các yếu tố khác giữ nguyên bố cục */
-.background img {
-    width: auto;
-    max-width: 100%;
-    border: 0;
-    border-radius: 20px;
-    object-fit: cover;
+.loginregister {
+    text-align: right;
+    margin-top: 10px;
+}
+.form-container {
+    margin: 30px auto;
+    max-width: 600px;
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
 }

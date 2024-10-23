@@ -13,24 +13,28 @@ body {
 header {
     background-color: #0050ac;
     color: white;
-    padding: 10px;
+    top: 40%;
+    padding: 20%;
     text-align: center;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 .logo-img {
-    max-width: 100%;
-    height: auto;
+    max-width: 30%;s
+    height: 50%;
     object-fit: contain;
+    box-sizing: border-box;
+    border-radius: 10px;
 }
 header .logo h1 {
     text-align: left;
-    font-size: 40px;
-    margin: 0;
+    
+    margin: auto;
     font-family: 'Script Fonts';
     font-weight: bold;
-}
+} 
 nav a.home {
     color: #fff;
     font-weight: bold;
@@ -38,19 +42,23 @@ nav a.home {
 header nav ul {
     list-style: none;
     display: flex;
-    margin: 0;
+    margin: 0 0 50% 50%;
     padding: 0;
+    font-size: 20px;
 }
 header nav ul li {
-    margin-left: 20px;
+    margin-left: 20%;
+    height: 100%;
+    top: 20%;
 }
 header nav ul li a {
     text-decoration: none;
     color: white;
-    font-size: 18px;
+    font-size: 20px;
 }
 header nav ul li a:hover {
     color: rgb(87, 87, 172);
+    height: 100%;
 }
 /* Đăng ký & đăng nhập */
 .register-button, .login-button {
@@ -74,7 +82,7 @@ header nav ul li a:hover {
 /* Thanh tìm kiếm */
 .search {
     position: absolute; /*Đặt thanh tìm kiếm lên trên ảnh */
-    top: 22%;
+    top:auto;
     left: 50%;
     transform: translate(-50%, -50%); /*Dịch chuyển để đặt chính giữa*/
     display: flex;
