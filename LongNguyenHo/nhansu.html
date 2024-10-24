@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Warehouse Management Dashboard</title>
     <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
-    
+    <link rel="stylesheet" href="nhansu.css">
 </head>
 <body>
     <!-- Khong dung lo go nua -->
@@ -44,11 +44,7 @@
                         </ul>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="report.html">Báo cáo</a></li>
-                    <ul class="nav-item"><a class="nav-link" href="nhansu.html">Nhân sự</a>
-                        <li><a class="dropdown-item" href="dsnv.html">Danh sách nhân viên</a></li>
-                        <li><a class="dropdown-item" href="phanquyen">Phân quyền</a></li>
-                        <li><a class="dropdown-item" href="nhansu.html">Tính lương</a></li>
-                    </ul>
+                    <li class="nav-item"><a class="nav-link" href="nhansu.html">Nhân sự</a></li>
                 </ul>
                 <div class="d-flex ms-auto">
                     <!-- Register / Login Buttons -->
@@ -58,23 +54,36 @@
             </div>
         </div>
     </nav>
+    <div class="container">
+        <h1>Chấm Công</h1>
+        <form id="attendance-form">
+            <label for="employee-name">Tên Nhân Viên:</label>
+            <select id="employee-name">
+                <option value="Lộc ngu">Lộc ngu</option>
+                <option value="Hồ Nguyên Long">Hồ Nguyên Long</option>
+                <option value="Đinh Văn Điệp">Đinh Văn Điệp</option>
+                <option value="Ngọc ngu">Ngọc ngu</option>
+                <option value="Nguyễn Phúc Hiếu">Nguyễn Phúc Hiếu</option>
+            </select>
 
-    <!-- Search Section -->
-    <div class="container mt-3">
-        <div class="row">
-            <div class="col-md-6 offset-md-3">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search...">
-                    <button class="btn btn-outline-secondary" type="button">Tìm kiếm</button>
-                </div>
-            </div>
-        </div>
+            <button type="button" onclick="checkIn()">Chấm Công</button>
+        </form>
+
+        <h2>Lịch Sử Chấm Công</h2>
+        <table id="attendance-table">
+            <thead>
+                <tr>
+                    <th>Tên Nhân Viên</th>
+                    <th>Thời Gian Chấm Công</th>
+                </tr>
+            </thead>
+            <tbody id="attendance-body">
+                <!-- Dữ liệu chấm công sẽ được hiển thị ở đây -->
+            </tbody>
+        </table>
     </div>
 
-    <!-- Background Image -->
-    <div class="container-fluid mt-4">
-        <img src="kho1.jpg" alt="Warehouse Background" class="img-fluid w-100">
-    </div>
+    <script src="chamcongvaquanlythoigian.js"></script>
 
     <!-- Footer -->
     <footer class="bg-light text-center py-3 mt-4">
