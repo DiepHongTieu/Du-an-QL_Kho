@@ -1,5 +1,18 @@
-.box{
-    background-color: aqua;
-    min-height: 50px;
-    margin-top: 10px;
+/* Đảm bảo các ảnh có kích thước và căn giữa */
+.carousel-item img {
+    width: 100%;          /* Chiều rộng 100% của khung chứa */
+    height: 500px;        /* Đặt chiều cao cố định cho ảnh */
+    object-fit: cover;    /* Cắt ảnh theo chiều rộng hoặc chiều cao mà không biến dạng */
+    margin: 0 auto;       /* Căn giữa ảnh */
+    padding: 40px;
+}
+.carousel {
+    max-width: 1200px;
+    margin: 0 auto; 
+}
+.ngocngu{
+    text-align: center;
+    width: 100%;
+    bottom: 0;
+    position: fixed;
 }
