@@ -96,6 +96,8 @@ nav .active {
     border-collapse:  collapse;
     margin-bottom: 20px;
     background-image: url(anhnen3.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 .order-list td {
     color: white;
@@ -158,6 +160,12 @@ nav .active {
 .btn-view:hover{
     background-color: #c82333;
 }
+.btn-delete:hover{
+    background-color: #17a2b8;
+}
+.btn-edit:hover{
+    background-color: blue;
+}
 .pagination{
     display: flex;
     justify-content: space-between;
@@ -177,4 +185,28 @@ nav .active {
 .pagiantion .page-info{
     font-size:  16px;
     color: #333;
+}
+footer {
+    background-color: #f8f9fa; /* Màu nền sáng (bg-light) */
+    color: #333; /* Màu chữ tối để tương phản với nền sáng */
+    text-align: center; /* Căn giữa nội dung văn bản */
+    padding: 15px 0; /* Khoảng cách trên và dưới (py-3) */
+    margin-top: 40px; /* Khoảng cách phía trên của footer (mt-4) */
+    font-size: 16px; /* Kích thước chữ */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng nhẹ ở trên footer */
+}
+
+footer p {
+    margin: 0; /* Loại bỏ margin của thẻ <p> */
+    line-height: 1.5; /* Dòng chữ có khoảng cách hợp lý */
+    font-weight: 400; /* Độ đậm của font */
+}
+
+footer p a {
+    color: #007bff; /* Đổi màu liên kết nếu có (thêm tính năng nếu bạn thêm đường link) */
+    text-decoration: none; /* Bỏ gạch chân dưới liên kết */
+}
+
+footer p a:hover {
+    text-decoration: underline; /* Hiệu ứng gạch chân khi hover vào liên kết */
 }
