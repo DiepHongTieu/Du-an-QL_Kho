@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="style-giohang.css">
+</head>
+<body>
+    <video autoplay muted loop class="background-video">
+        <source src="video-dong.mp4" type="video/mp4">
+        your browser does not support the video tag
+    </video>
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <h2>Warehouse Manager</h2>
+        </div>
+        <ul class="navbar-menu">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="products.html">Sản phẩm</a></li>
+            <li><a href="checkout.html">Thanh toán</a></li>
+            <li><a href="support.html">Hỗ trợ khách hàng</a></li>
+            <li><a href="shopping cart.html" class="active">Giỏ hàng</a></li> <!-- Đổi tên thành Giỏ hàng -->
+            <li><a href="inventory.html">Tồn kho</a></li>
+            <li><a href="settings.html">Cài đặt</a></li>
+        </ul>
+    </nav>
+    <section class="cart-container">
+        <table class="cart-table">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Subtotal</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Sản phẩm 1 -->
+                <tr>
+                    <td>
+                        <div class="product-info">
+                            <img src="nen.jpg" alt="Product 1">
+                            <span>Product 1</span>
+                        </div>
+                    </td>
+                    <td>$20</td>
+                    <td>
+                        <input type="number" value="1" min="1" class="quantity-input">
+                    </td>
+                    <td>$20</td>
+                    <td><button class="btn-remove">Remove</button></td>
+                </tr>
+                <!-- Sản phẩm 2 -->
+                <tr>
+                    <td>
+                        <div class="product-info">
+                            <img src="nen.jpg"alt="Product 2">
+                            <span>Product 2</span>
+                        </div>
+                    </td>
+                    <td>$15</td>
+                    <td>
+                        <input type="number" value="1" min="1" class="quantity-input">
+                    </td>
+                    <td>$15</td>
+                    <td><button class="btn-remove">Remove</button></td>
+                </tr>
+                <!-- Thêm sản phẩm khác ở đây -->
+            </tbody>
+        </table>
+        <div class="cart-summary">
+            <h3>Cart Summary</h3>
+            <p>Total: <span>$35</span></p>
+            <button class="btn-checkout">Proceed to Checkout</button>
+        </div>
+    </section>
+    <footer class="cart-footer"> <p>&copy;<a href="https://www.utc.edu.vn/"> Information Technology - IT4 - University of Transport and Communications</a></p></footer>
+</body>
+</html>

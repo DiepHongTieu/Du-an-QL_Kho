@@ -1,0 +1,193 @@
+body {
+    background-size: cover;
+    font-family: aral, san-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+}
+.background-video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 800px;
+    object-fit: cover;
+    z-index: -1;
+}
+nav {
+    background-color: #333;          /* Màu nền cho thanh điều hướng */
+    color: white;                    /* Màu chữ cho thanh điều hướng */
+    padding: 10px;  
+    height: 40px;                 /* Khoảng cách bên trong thanh điều hướng */
+    display: flex;                   /* Sử dụng flexbox để căn chỉnh các phần tử */
+    align-items: center;             /* Căn giữa các phần tử theo chiều dọc */
+    flex-direction: column;
+    padding: 0 15px;
+}
+nav .navbar-logo {
+    display: flex;                   /* Sử dụng flexbox để căn chỉnh logo và tiêu đề */
+    align-items: center;            
+}
+nav .navbar-logo h2 {
+    margin: 0;                       /* Xóa khoảng cách mặc định */
+    font-size: 30px;  
+    background: none;
+    border: none;            
+}
+
+.navbar-menu {
+    list-style-type: none;
+    display: flex;                   /* Hiển thị các mục menu theo hàng ngang */
+    justify-content: center;        
+    margin: 0;                       /* Xóa khoảng cách mặc định */
+    padding: 10px 0 0 0;            /* Khoảng cách cho menu */
+}
+.navbar-menu li a:hover{
+    background-color: black;
+    color: antiquewhite;
+    border-radius: 6px;
+}
+nav ul li {
+    margin-left: 20px;               /* Khoảng cách giữa các mục menu */
+}
+
+nav ul li a {
+    color: white;                    /* Màu chữ cho liên kết */
+    text-decoration: none;           /* Xóa gạch chân */
+    font-size: 17px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;      /* Gạch chân khi hover */
+}
+
+nav .active {
+    text-decoration: underline;      /* Gạch chân cho liên kết đang hoạt động */
+}
+.cart-container{
+    z-index: 1;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top:  50px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+}
+.cart-table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+.cart-table th, .cart-table td{
+    background-image: url(maunen.jpg);
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #0cf;
+    border-left: 1px solid #0cf;
+    border-right: 1px solid #0cf;
+    border-top: 1px solid #0cf;
+}
+.cart-table th{
+    color: #333;
+    font-style: initial;
+    font-size: 25px;
+}
+.product-info{
+    display: flex;
+    align-items: center;
+}
+.product-info img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+.quantity-input{
+    width: 50px;
+    padding: 5px;
+    text-align: center;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.btn-remove{
+    background-color:  #603;
+    color: #fff;
+    border: 1px solid #f0f0f5;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.btn-remove:hover{
+    background-color: #f66;
+}
+.cart-summary{
+    background-image: url(maunen.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    text-align: center;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 10px;    
+}
+.cart-summary h3{
+    color: #f0f0f5;
+    font-size: 25px;
+    font-family: Arial;
+    margin-bottom: 10px;
+}
+.cart-summary p{
+    font-size: 20px;
+    font-weight: bold;
+    color: #555;
+}
+.cart-summary span{
+    color: #f63;
+    font-weight: bold;
+}
+.btn-checkout{
+    margin-top: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.btn-checkout:hover{
+    background-color: #45a049;
+}
+.cart-footer{
+    background-color: #f8f9fa;
+    color: #333;
+    text-align: center;
+    font-size: 15px;
+    margin-top: auto;
+    border-radius: 10px;
+}
+.cart-footer p{
+    margin: 0;
+    line-height: 1.5;
+}
+.cart-footer a{
+    color: #007bff;
+    text-decoration: none;
+}
+.cart-footer a:hover{
+    text-decoration: underline;
+    color: #f66;
+}

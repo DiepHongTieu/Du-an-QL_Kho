@@ -208,5 +208,6 @@ footer p a {
 }
 
 footer p a:hover {
+    color: #f66;
     text-decoration: underline; /* Hiệu ứng gạch chân khi hover vào liên kết */
 }
