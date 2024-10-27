@@ -2,14 +2,30 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    border-radius: 20px;
 }
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    color: #333;
     margin: 0 auto;
+    max-height: 100%;
 }
-main{
-    
+.tongquan1{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    width: 100%;
+    margin: auto;
+    padding-bottom: 30px;
+    img{
+        max-width: 100%;
+        border-radius: 5px;
+        background-color: #f4f4f4;
+      
+    } 
+    border-bottom: 1px solid grey;
+}
+footer{
+    p{text-align: center;}
 }
 
