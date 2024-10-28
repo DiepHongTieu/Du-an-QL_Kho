@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders - Warehouse Management</title>
+    <link rel="stylesheet" href="style-donhang.css"> <!-- Link đến file CSS -->
+</head>
+<body>
+    <!-- Thanh điều hướng -->
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <h2>Warehouse Manager</h2>
+        </div>
+        <ul class="navbar-menu">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="orders.html" class="active">Orders</a></li>
+            <li><a href="inventory.html">Inventory</a></li>
+            <li><a href="settings.html">Settings</a></li>
+        </ul>
+    </nav>
+
+    <!-- Nội dung chính của trang đơn hàng -->
+    <div class="main-content">
+        <h1>Orders</h1>
+
+        <!-- Tìm kiếm và bộ lọc -->
+        <section class="filter-search">
+            <form>
+                <input type="text" placeholder="Search by Order ID, Customer Name..." class="search-bar">
+                <select class="filter-dropdown">
+                    <option value="all">All Statuses</option>
+                    <option value="pending">Pending</option>
+                    <option value="shipped">Shipped</option>
+                    <option value="delivered">Delivered</option>
+                    <option value="cancelled">Cancelled</option>
+                </select>
+                <button type="submit" class="btn-search">Search</button>
+            </form>
+        </section>
+
+        <!-- Bảng danh sách đơn hàng -->
+        <section class="order-list">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Customer</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Total</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#1001</td>
+                        <td>John Doe</td>
+                        <td>2024-10-23</td>
+                        <td><span class="status shipped">Shipped</span></td>
+                        <td>$150</td>
+                        <td>
+                            <button class="btn-view">View</button>
+                            <button class="btn-edit">Edit</button>
+                            <button class="btn-delete">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>#1002</td>
+                        <td>Jane Smith</td>
+                        <td>2024-10-22</td>
+                        <td><span class="status pending">Pending</span></td>
+                        <td>$75</td>
+                        <td>
+                            <button class="btn-view">View</button>
+                            <button class="btn-edit">Edit</button>
+                            <button class="btn-delete">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>#1003</td>
+                        <td>Michael Johnson</td>
+                        <td>2024-10-21</td>
+                        <td><span class="status delivered">Delivered</span></td>
+                        <td>$220</td>
+                        <td>
+                            <button class="btn-view">View</button>
+                            <button class="btn-edit">Edit</button>
+                            <button class="btn-delete">Delete</button>
+                        </td>
+                    </tr>
+                    <!-- Các đơn hàng khác -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Phân trang -->
+        <section class="pagination">
+            <button class="btn-prev">Previous</button>
+            <span class="page-info">Page 1 of 5</span>
+            <button class="btn-next">Next</button>
+        </section>
+    </div>
+
+    <script src="scripts.js"></script> <!-- Link đến file JavaScript -->
+    <footer class="bg-light text-center py-3 mt-4">
+        <p>&copy; Information Technology - IT4 - <a href="https://www.utc.edu.vn/">University of Transport and Communications</a></p>
+    </footer>
+</body>
+</html>

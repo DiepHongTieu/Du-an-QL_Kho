@@ -9,11 +9,14 @@
     <script src="checkvalid.js"></script>
 </head>
 <body>
+    <div class="d-flex ms-auto">
+        <a href="warehousemain.html" class="btn btn-outline-primary me-2" style="margin: 10px 20px;">Trở về trang chủ</a>
+    </div>
     <div class="container">
         <form class="register-form" onsubmit="return validform(this)" method="post" action="#"> <!-- Replace '#' with your server-side script -->
-            <h2>Register</h2>
+            <h2>Đăng ký</h2>
             <div class="form-group">
-                <label for="fullname">Full Name:</label>
+                <label for="fullname">Họ và tên:</label>
                 <input type="text" class="form-control" id="fullname" name="fullname" placeholder="Enter full name" required>
             </div>
             <div class="form-group">
@@ -21,30 +24,30 @@
                 <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" required>
             </div>
             <div class="form-group">
-                <label for="phone">Phone:</label>
+                <label for="phone">Số điện thoại:</label>
                 <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter phone number" required>
             </div>
             <div class="form-group">
-                <label for="password">Password:</label>
+                <label for="password">Mật khẩu:</label>
                 <input type="password" class="form-control" id="password" name="password" placeholder="Enter password" required>
             </div>
             <div class="form-group">
-                <label for="confirm_password">Confirm Password:</label>
+                <label for="confirm_password">Xác nhận mật khẩu:</label>
                 <input type="password" class="form-control" id="confirm_password" name="confirm_password" placeholder="Confirm password" required>
             </div>
             <div class="form-group">
-                <label>Gender:</label><br>
+                <label>Giới tính:</label><br>
                 <input type="radio" id="male" name="gender" value="male">
-                <label for="male">Male</label>
+                <label for="male">Nam</label>
                 <input type="radio" id="female" name="gender" value="female">
-                <label for="female">Female</label>
+                <label for="female">Nữ</label>
             </div>
             <div class="form-group">
-                <label for="age">Age:</label>
+                <label for="age">Tuổi:</label>
                 <input type="text" class="form-control" id="age" name="age" required>
             </div>
-            <button type="submit" class="btn btn-primary register-button">Register</button>
-            <p class="register-link">Already have an account? <a href="login.html">Login</a></p>
+            <button type="submit" class="btn btn-primary register-button">Đăng ký</button>
+            <p class="register-link">Bạn đã có tài khoản rồi? <a href="login.html">Đăng nhập</a></p>
         </form>
     </div>
 </body>

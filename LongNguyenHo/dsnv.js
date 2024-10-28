@@ -1,24 +1,38 @@
 const employees = [
     {
-        name: "Nguyễn Văn A",
-        position: "Quản lý kho",
-        phone: "0123456789",
-        email: "nguyenvana@example.com",
-        status: "Đang làm việc"
+        name: "Hồ Nguyên Long",
+        position: "",
+        phone: "",
+        email: "",
+        status: ""
     },
     {
-        name: "Trần Thị B",
-        position: "Nhân viên kiểm kho",
-        phone: "0987654321",
-        email: "tranthib@example.com",
-        status: "Nghỉ phép"
+        name: "Ngô Xuân Lộc",
+        position: "",
+        phone: "",
+        email: "",
+        status: ""
     },
     {
-        name: "Phạm Văn C",
-        position: "Nhân viên giao nhận",
-        phone: "0912345678",
-        email: "phamvanc@example.com",
-        status: "Đang làm việc"
+        name: "Đinh Văn Điệp",
+        position: "",
+        phone: "",
+        email: "",
+        status: ""
+    },
+    {
+        name: "Hoàng Bá Ngọc",
+        position: "",
+        phone: "",
+        email: "",
+        status: ""
+    },
+    {
+        name: "Nguyễn Phúc Hiếu",
+        position: "",
+        phone: "",
+        email: "",
+        status: ""
     }
 ];
 

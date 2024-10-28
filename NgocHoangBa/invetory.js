@@ -17,6 +17,7 @@ function nhapKho() {
     document.getElementById('importForm').reset();
     
     if(tenSanPham && soLuong && nhaCungCap && donGia && ngayNhap && ghiChu) {
+        alert("Nhập thành công ");
         let s = localStorage.getItem('s') ? JSON.parse(localStorage.getItem('s')) : [];
         let z = localStorage.getItem('z') ? JSON.parse(localStorage.getItem('z')) : [];
         s.push(
@@ -42,7 +43,6 @@ function nhapKho() {
         )
         localStorage.setItem('s', JSON.stringify(s));
         localStorage.setItem('z', JSON.stringify(z));
-        
         this.renderListProduct();
     }
 
@@ -123,6 +123,7 @@ function xuatKho() {
     document.getElementById('exportForm').reset();
     
     if(tenSanPham && sluong && kHang && ngayXuat && ghiChu) {
+        
         let s = localStorage.getItem('s') ? JSON.parse(localStorage.getItem('s')) : [];
         let z = localStorage.getItem('z') ? JSON.parse(localStorage.getItem('z')) : [];
         s.forEach((item) => {
@@ -143,8 +144,8 @@ function xuatKho() {
             alert("Không có sản phẩm trong kho hàng")
             return;
         }
-        if(ncc>ngayXuat) {
-            alert("Hàng tồn kho không đủ")
+        if(ncc<ngayXuat) {
+            alert("Không có sản phẩm")
             return;
         }
         if(c!==0) {
@@ -173,7 +174,9 @@ function xuatKho() {
                 ghiChu: ghiChu,
             }
         );
-        if(sl>0) {z.push(
+        if(sl>0) {
+            alert("Xuất thành công");
+            z.push(
             {
                 tenMatHang: tenSanPham,
                 soLuong: sl,
@@ -183,7 +186,6 @@ function xuatKho() {
                 ghiChu: gc,
             }
         )
-
         } else {
             alert("Sản phẩm không đủ")
             return;

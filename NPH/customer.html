@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Management</title>
+    <link rel="stylesheet" href="customer.css">
+</head>
+<body>
+
+<header class="header">
+    <h1>Customer Management</h1>
+</header>
+
+<main>
+    <!-- Customer List Section -->
+    <section class="customer-list">
+        <h2>Customer List</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Customer Type</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>John Doe</td>
+                    <td>johndoe@example.com</td>
+                    <td>123-456-7890</td>
+                    <td>Domestic</td>
+                    <td>
+                        <button class="edit-btn">Edit</button>
+                        <button class="delete-btn">Delete</button>
+                    </td>
+                </tr>
+                <!-- Thêm nhiều dòng khách hàng khác vào đây -->
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Customer Details Form -->
+    <section class="customer-form">
+        <h2>Add / Edit Customer</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="customerType">Customer Type:</label>
+            <select id="customerType" name="customerType" required>
+                <option value="">--Select Customer Type--</option>
+                <option value="domestic">Domestic</option>
+                <option value="international">International</option>
+                <option value="internal">Internal</option>
+            </select>
+
+            <button type="submit">Save Customer</button>
+        </form>
+    </section>
+</main>
+<footer class="bg-light text-center py-3 mt-4">
+    <p>&copy;<a href="https://www.utc.edu.vn/">Information Technology - IT4 - University of Transport and Communications</a></p>
+</footer>
+
+</body>
+</html>
