@@ -43,7 +43,6 @@ function nhapKho() {
         )
         localStorage.setItem('s', JSON.stringify(s));
         localStorage.setItem('z', JSON.stringify(z));
-        
         this.renderListProduct();
     }
 

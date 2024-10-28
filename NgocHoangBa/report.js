@@ -71,11 +71,76 @@ function taoBaoCao() {
 
 
 }
+function renderChart() {
+    
+    let z = localStorage.getItem('z') ? JSON.parse(localStorage.getItem('z')) : [];
+
+    let labels = z.map(item => item.tenMatHang);
+    let data = z.map(item => item.soLuong);
 
 
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'bar', 
+        data: {
+            labels: labels, 
+            datasets: [{
+                label: 'Số lượng nhập kho',
+                data: data, 
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1,
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+    let y = localStorage.getItem('y') ? JSON.parse(localStorage.getItem('y')) : [];
+    
+    let trongNuocCount = 0;
+let ngoaiNuocCount = 0;
+let noiBoCount = 0;
 
 
-document.addEventListener('DOMContentLoaded', () => {
-
-    taoBaoCao();
+y.forEach(item => {
+    if (item.loai === "Trong nước") {
+        trongNuocCount += 1;
+    } else if (item.loai === "Nước ngoai") {
+        ngoaiNuocCount += 1;
+    } else {
+        noiBoCount += 1;
+    }
 });
+
+
+let label = ["Trong nước", "Nước ngoài", "Nội bộ"];
+let dataa = [trongNuocCount, ngoaiNuocCount, noiBoCount];
+
+    // Tạo biểu đồ với Chart.js
+    var abc = document.getElementById('khach').getContext('2d');
+    var khach = new Chart(abc, {
+        type: 'bar', // Loại biểu đồ: cột
+        data: {
+            labels: label, // Tên các mặt hàng
+            datasets: [{
+                label: 'Số lượng khách hàng',
+                data: dataa, // Số lượng tương ứng với từng mặt hàng
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1,
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+}
