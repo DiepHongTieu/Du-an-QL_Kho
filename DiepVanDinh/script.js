@@ -1,18 +1,21 @@
-const themeToggle = document.getElementById('themeToggle');
-const body = document.body;
-
-themeToggle.addEventListener('click', () => {
-    body.classList.toggle('dark-mode'); 
-    // Store the user's preference (using localStorage for example)
-    if (body.classList.contains('dark-mode')) {
-        localStorage.setItem('theme', 'dark');
-    } else {
-        localStorage.setItem('theme', 'light');
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleSwitch = document.getElementById('darkModeToggle');
+    const body = document.body;
+  
+    toggleSwitch.addEventListener('change', function() {
+      if (this.checked) {
+        body.classList.add('dark-mode');
+        localStorage.setItem('darkMode', 'true'); // Lưu trạng thái vào localStorage
+      } else {
+        body.classList.remove('dark-mode');
+        localStorage.removeItem('darkMode'); // Xóa trạng thái khỏi localStorage
+      }
+    });
+  
+    // Khôi phục trạng thái từ localStorage khi tải trang
+    const darkMode = localStorage.getItem('darkMode');
+    if (darkMode === 'true') {
+      toggleSwitch.checked = true;
+      body.classList.add('dark-mode');
     }
-});
-
-// Check for user's preference on page load
-const savedTheme = localStorage.getItem('theme');
-if (savedTheme === 'dark') {
-    body.classList.add('dark-mode');
-}
+  });
