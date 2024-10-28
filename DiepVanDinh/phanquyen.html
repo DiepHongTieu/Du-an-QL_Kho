@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quản lý khách hàng</title>
+    <title>Phân Quyền và Vai Trò</title>
+    <link rel="stylesheet" href="phanquyenvavaitro.css">
     <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css"> 
 </head>
-
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -47,50 +45,50 @@
                             </li>
                     </ul>
                     <div class="d-flex ms-auto">
-                       
-                    <!-- Register / Login Buttons -->
-                    <a href="warehousemain.html" class="btn btn-outline-primary me-2">Đăng xuất</a>
+                        <!-- Register / Login Buttons -->
+                        <a href="warehousemain.html" class="btn btn-outline-primary me-2">Đăng xuất</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+            </header>
+        
+    <div class="container">
+        <h1>Phân Quyền và Vai Trò</h1>
+        <form id="role-form">
+            <label for="employee-name">Tên Nhân Viên:</label>
+            <select id="employee-name">
+                <option value="Ngô Xuân Lộc">Ngô Xuân Lộc</option>
+                <option value="Hồ Nguyên Long">Hồ Nguyên Long</option>
+                <option value="Đinh Văn Điệp">Đinh Văn Điệp</option>
+                <option value="Hoàng Bá Ngọc">Hoàng Bá Ngọc</option>
+                <option value="Nguyễn Phúc Hiếu">Nguyễn Phúc Hiếu</option>
+            </select>
 
-    <div class="container mt-5">
-        <h1>Quản lý khách hàng</h1>
+            <label for="role">Vai Trò:</label>
+            <select id="role">
+                <option value="admin">Quản trị viên</option>
+                <option value="manager">Quản lý kho</option>
+                <option value="staff">Nhân viên</option>
+            </select>
 
-        <ul class="nav nav-tabs" id="customerTabs" role="tablist">
-            <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="domestic-tab" data-bs-toggle="tab" data-bs-target="#domestic"
-                    type="button" role="tab" aria-controls="domestic" aria-selected="true">Trong nước</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="international-tab" data-bs-toggle="tab" data-bs-target="#international"
-                    type="button" role="tab" aria-controls="international" aria-selected="false">Nước ngoài</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="internal-tab" data-bs-toggle="tab" data-bs-target="#internal" type="button"
-                    role="tab" aria-controls="internal" aria-selected="false">Nội bộ</button>
-            </li>
-        </ul>
+            <button type="button" onclick="assignRole()">Phân Quyền</button>
+        </form>
 
-        <div class="tab-content" id="customerTabContent">
-            <div class="tab-pane fade show active p-3" id="domestic" role="tabpanel" aria-labelledby="domestic-tab">
-                </div>
-            <div class="tab-pane fade p-3" id="international" role="tabpanel" aria-labelledby="international-tab">
-                </div>
-            <div class="tab-pane fade p-3" id="internal" role="tabpanel" aria-labelledby="internal-tab">
-
-            </div>
-        </div>
+        <h2>Danh Sách Vai Trò</h2>
+        <table id="role-table">
+            <thead>
+                <tr>
+                    <th>Tên Nhân Viên</th>
+                    <th>Vai Trò</th>
+                </tr>
+            </thead>
+            <tbody id="role-body">
+                <!-- Vai trò sẽ được hiển thị ở đây -->
+            </tbody>
+        </table>
     </div>
-
-    
-
- <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
- <script src="customer.js"></script>
+    <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="phanquyenvavaitro.js"></script>
 </body>
-    <!-- Footer -->
-    <footer class="bg-light text-center py-3 mt-4">
-        <p>&copy; Information Technology - IT4 - University of Information and Communication</p>
-    </footer>
 </html>
