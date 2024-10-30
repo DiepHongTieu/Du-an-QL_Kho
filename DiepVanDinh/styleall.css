@@ -1,3 +1,9 @@
+body{  
+    background-color: #f0f0f0; /* Màu nền mặc định */  
+    background-repeat: no-repeat; /* Không lặp lại */  
+    background-size: cover;
+    background: url(./imagewarehouse/—Pngtree—3d\ render\ of\ warehouse\ interior_7229824.jpg);
+}
 .dark-mode {
     background-color: #333; /* Màu nền tối */
     color: #fff; /* Màu chữ sáng */
@@ -17,7 +23,7 @@
     background-color: #444; /* Thay đổi màu bg-body-tertiary trong chế độ tối */
   }
   .dark-mode a.link-secondary {
-      color: #ccc;
+      color: #ffffff;
   }
   .dark-mode .btn-outline-primary{
       color: #fff;
@@ -25,7 +31,7 @@
   
   }
   .dark-mode .btn-outline-secondary{
-      color: #fff;
+      color: #f3f3f3;
       border-color: #fff;
   }
   /* The switch - the box around the slider */

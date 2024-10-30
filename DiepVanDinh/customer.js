@@ -1,72 +1,100 @@
-// customer.js
-let khachHangTrongNuoc = [];
-let khachHangNuocNgoai = [];
-let khachHangNoiBo = [];
 
-// Hàm tạo form nhập thông tin khách hàng
-function taoFormNhapKhachHang(loaiKhachHang) {
-    const form = document.createElement('form');
-    form.id = 'customerForm'; // Đặt id cho form
+function trongnuoc() {
 
-    form.innerHTML = `
-        <div class="mb-3">
-            <label for="customerCode" class="form-label">Mã khách hàng:</label>
-            <input type="text" id="customerCode" name="customerCode" class="form-control" required>
-        </div>
-        <div class="mb-3">
-            <label for="fullname" class="form-label">Họ tên:</label>
-            <input type="text" id="fullname" name="fullname" class="form-control" required>
-        </div>
-        <div class="mb-3">
-            <label for="contactNumber" class="form-label">Số điện thoại:</label>
-            <input type="tel" id="contactNumber" name="contactNumber" class="form-control" required>
-        </div>
-        <div class="mb-3">
-            <label for="gmail" class="form-label">Gmail:</label>
-            <input type="email" id="gmail" name="gmail" class="form-control" required>
-        </div>
-        <div class="mb-3">
-            <label for="address" class="form-label">Địa chỉ:</label>
-            <textarea id="address" name="address" class="form-control" required></textarea>
-        </div>
-        <div class="mb-3">
-            <label for="deliveryDate" class="form-label">Ngày giao hàng:</label>
-            <input type="date" id="deliveryDate" name="deliveryDate" class="form-control" required>
-        </div>
-        <button type="button" class="btn btn-primary" onclick="themKhachHang('${loaiKhachHang}')">Thêm</button>
-    `;
+    let mkh= document.getElementById("customerCode").value;
+    let ht = document.getElementById("fullname").value;
+    let ngh = document.getElementById("deliveryDate").value;
+    let sdt = document.getElementById("contactNumber").value;
+    let dc = document.getElementById("address").value;
+    let em = document.getElementById("gmail").value;
+    let loai;
+    
+    
+    document.getElementById('tnuoc').reset();
+    
+    if(mkh && ht && ngh && sdt && dc && em) {
+        alert("Nhập thành công ");
+        let y = localStorage.getItem('y') ? JSON.parse(localStorage.getItem('y')) : [];
+        
+        y.push(
+            {
+                loai: "Trong nước",
+                makhachhang: mkh,
+                hoten: ht,
+                sodt: sdt,
+                gmail: em,
+                diachi: dc,
+                ngaygh: ngh,
+                
+            }
+        );
+        
+        localStorage.setItem('y', JSON.stringify(y));
+    } else { alert("Nhập không thành công");}
 
-
-    return form;
 }
+function noibo() {
 
-// Hàm thêm khách hàng mới (giống như trước)
-function themKhachHang(loaiKhachHang) {
-    // ... (code như trước)
+    let mkh= document.getElementById("b1").value;
+    let ht = document.getElementById("b2").value;
+    let sdt = document.getElementById("b3").value;
+    let em = document.getElementById("b4").value;
+    let dc = document.getElementById("b5").value;
+    let ngh = document.getElementById("b6").value;
+    let loai;
+    
+    
+    document.getElementById('nbo').reset();
+    
+    if(mkh && ht && ngh && sdt && dc && em) {
+        alert("Nhập thành công ");
+        let y = localStorage.getItem('y') ? JSON.parse(localStorage.getItem('y')) : [];
+        
+        y.push(
+            {
+                loai: "Nội bộ",
+                makhachhang: mkh,
+                hoten: ht,
+                sodt: sdt,
+                gmail: em,
+                diachi: dc,
+                ngaygh: ngh,
+                
+            }
+        );
+        
+        localStorage.setItem('y', JSON.stringify(y));
+    } else { alert("Nhập không thành công");}
+
 }
+function nuocngoai() {
 
-// Hàm hiển thị danh sách khách hàng (giống như trước)
-function hienThiKhachHang(danhSachKhachHang, tabId) {
+    let mkh= document.getElementById("n1").value;
+    let ht = document.getElementById("n2").value;
+    let sdt = document.getElementById("n3").value;
+    let em = document.getElementById("n4").value;
+    let dc = document.getElementById("n5").value;
+    let ngh = document.getElementById("n6").value;
+    let loai;
+    
+    document.getElementById('nngoai').reset();
+    
+    if(mkh && ht && ngh && sdt && dc && em) {
+        alert("Nhập thành công ");
+        let y = localStorage.getItem('y') ? JSON.parse(localStorage.getItem('y')) : [];
+        y.push(
+            {
+                loai: "Nước ngoai",
+                makhachhang: mkh,
+                hoten: ht,
+                sodt: sdt,
+                gmail: em,
+                diachi: dc,
+                ngaygh: ngh,
+            }
+        );
+        
+        localStorage.setItem('y', JSON.stringify(y));
+    } else { alert("Nhập không thành công");}
 
-    // ... (code như trước)
 }
-
-
-
-// Thêm form vào mỗi tab khi trang web được tải
-document.addEventListener('DOMContentLoaded', () => {
-
-    const tabIds = ['domestic', 'international', 'internal'];
-    const loaiKhachHangs = ['trongNuoc', 'nuocNgoai', 'noiBo'];
-
-
-
-    tabIds.forEach((tabId, index) => {
-
-
-        const form = taoFormNhapKhachHang(loaiKhachHangs[index]);
-        document.getElementById(tabId).appendChild(form);
-        hienThiKhachHang([], tabId)
-    });
-
-});

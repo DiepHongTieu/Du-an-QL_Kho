@@ -1,120 +1,198 @@
-let tonKho = [];
+
 let nhapXuatList = [];
 
-function capNhatBangTonKho() {
-    const tonKhoTableBody = document.getElementById("inventoryTable").getElementsByTagName("tbody")[0];
-    tonKhoTableBody.innerHTML = ""; // Xóa nội dung hiện tại
+let c=0;
 
-    tonKho.forEach(matHang => {
-        const row = tonKhoTableBody.insertRow();
-        row.insertCell(0).innerText = matHang.tenMatHang;
-        row.insertCell(1).innerText = matHang.soLuong;
-        row.insertCell(2).innerText = matHang.nhaCungCap;
-        row.insertCell(3).innerText = matHang.donGia;
-        row.insertCell(4).innerText = matHang.ngayNhap;
-        row.insertCell(5).innerText = matHang.ghiChu;
-    });
-}
-
-function capNhatBangNhapXuat() {
-    const nhapXuatTableBody = document.getElementById("nhapXuatTable").getElementsByTagName("tbody")[0];
-    nhapXuatTableBody.innerHTML = ""; // Xóa nội dung hiện tại
-
-    nhapXuatList.forEach(record => {
-        const row = nhapXuatTableBody.insertRow();
-        row.insertCell(0).innerText = record.loai;
-        row.insertCell(1).innerText = record.tenMatHang;
-        row.insertCell(2).innerText = record.soLuong;
-        row.insertCell(3).innerText = record.nhaCungCap_KhachHang;
-        row.insertCell(4).innerText = record.donGia;
-        row.insertCell(5).innerText = record.ngay;
-        row.insertCell(6).innerText = record.ghiChu;
-    });
-}
 
 function nhapKho() {
-    const tenSanPham = document.getElementById("importProduct").value;
-    const soLuong = parseInt(document.getElementById("importQuantity").value);
-    const nhaCungCap = document.getElementById("importSupplier").value;
-    const donGia = parseFloat(document.getElementById("importPrice").value);
-    const ngayNhap = document.getElementById("importDate").value;
-    const ghiChu = document.getElementById("importNote").value;
 
-    const matHangMoi = {
-        tenMatHang: tenSanPham,
-        soLuong: soLuong,
-        nhaCungCap: nhaCungCap,
-        donGia: donGia,
-        ngayNhap: ngayNhap,
-        ghiChu: ghiChu
-    };
+    let tenSanPham = document.getElementById("importProduct").value;
+    let soLuong = parseInt(document.getElementById("importQuantity").value);
+    let nhaCungCap = document.getElementById("importSupplier").value;
+    let donGia = parseFloat(document.getElementById("importPrice").value);
+    let ngayNhap = document.getElementById("importDate").value;
+    let ghiChu = document.getElementById("importNote").value;
+    let loai;
+    
+    document.getElementById('importForm').reset();
+    
+    if(tenSanPham && soLuong && nhaCungCap && donGia && ngayNhap && ghiChu) {
+        alert("Nhập thành công ");
+        let s = localStorage.getItem('s') ? JSON.parse(localStorage.getItem('s')) : [];
+        let z = localStorage.getItem('z') ? JSON.parse(localStorage.getItem('z')) : [];
+        s.push(
+            {
+                loai: "Nhập",
+                tenMatHang: tenSanPham,
+                soLuong: soLuong,
+                nhaCungCap: nhaCungCap,
+                donGia: donGia,
+                ngayNhap: ngayNhap,
+                ghiChu: ghiChu,
+            }
+        );
+        z.push(
+            {
+                tenMatHang: tenSanPham,
+                soLuong: soLuong,
+                nhaCungCap: nhaCungCap,
+                donGia: donGia,
+                ngayNhap: ngayNhap,
+                ghiChu: ghiChu,
+            }
+        )
+        localStorage.setItem('s', JSON.stringify(s));
+        localStorage.setItem('z', JSON.stringify(z));
+        this.renderListProduct();
+    }
 
-    tonKho.push(matHangMoi);
-
-    nhapXuatList.push({
-        loai: "Nhập",
-        tenMatHang: tenSanPham,
-        soLuong: soLuong,
-        nhaCungCap_KhachHang: nhaCungCap,
-        donGia: donGia,
-        ngay: ngayNhap,
-        ghiChu: ghiChu
-    });
-
-    capNhatBangTonKho(); // Cập nhật bảng tồn kho sau khi nhập
-    capNhatBangNhapXuat(); // Cập nhật bảng nhập/xuất sau khi nhập
-
-    document.getElementById("importForm").reset();
 }
+function  renderListProduct() {
+    let s = localStorage.getItem('s') ? JSON.parse(localStorage.getItem('s')) : [];
+    let z = localStorage.getItem('z') ? JSON.parse(localStorage.getItem('z')) : [];
+   
 
+    let tableCotent=`<tr> 
+                <th>Loại</th>
+                <th>Tên mặt hàng</th>
+                <th>Số lượng</th>
+                
+                <th>Nhà cung cấp/Khách hàng</th>
+                <th>Đơn giá</th>
+
+                <th>Ngày</th>
+                <th>Ghi chú</th>
+            </tr>`;
+            s.forEach((s, index) =>{
+                index++;
+                tableCotent += `<tr>
+               <td>${s.loai}</td>
+               <td>${s.tenMatHang}</td>
+               <td>${s.soLuong}</td>
+               <td>${s.nhaCungCap}</td>
+               <td>${s.donGia}</td>
+               <td>${s.ngayNhap}</td>
+               <td>${s.ghiChu}</td>
+            </tr>`;
+            })
+            
+            document.getElementById('nhapXuatTable').innerHTML = tableCotent;
+            //xuất
+
+            //tồn kho
+        let table2=`<tr>
+            <th>Tên mặt hàng</th>
+            <th>Số lượng</th>
+            
+            <th>Nhà cung cấp/Khách hàng</th>
+            <th>Đơn giá</th>
+
+            <th>Ngày</th>
+            <th>Ghi chú</th>
+        </tr>`;
+        z.forEach((z, index) =>{
+            index++;
+            table2 += `<tr>
+
+           <td>${z.tenMatHang}</td>
+           <td>${z.soLuong}</td>
+           <td>${z.nhaCungCap}</td>
+           <td>${z.donGia}</td>
+           <td>${z.ngayNhap}</td>
+           <td>${z.ghiChu}</td>
+        </tr>`;
+        })
+        document.getElementById('inventoryTable').innerHTML = table2;
+
+}
 function xuatKho() {
-    const tenSanPham = document.getElementById("exportProduct").value;
-    const soLuong = parseInt(document.getElementById("exportQuantity").value);
-    const ngayXuat = document.getElementById("exportDate").value;
-    const ghiChu = document.getElementById("exportNote").value;
-
-    let index = -1;
-
-    for (let i = 0; i < tonKho.length; i++) {
-        if (tonKho[i].tenMatHang === tenSanPham) {
-            index = i;
-            break;
+    let tenSanPham = document.getElementById("exportProduct").value;
+    let sluong = parseInt(document.getElementById("exportQuantity").value);
+    let kHang = document.getElementById("exportSupplier").value;
+    let dGia;
+    let ngayXuat = document.getElementById("exportDate").value;
+    let ghiChu = document.getElementById("exportNote").value;
+    let loai;
+    let sl;
+    let dg;
+    let ncc;
+    let nn;
+    let gc;
+    let b=0;
+    
+    document.getElementById('exportForm').reset();
+    
+    if(tenSanPham && sluong && kHang && ngayXuat && ghiChu) {
+        
+        let s = localStorage.getItem('s') ? JSON.parse(localStorage.getItem('s')) : [];
+        let z = localStorage.getItem('z') ? JSON.parse(localStorage.getItem('z')) : [];
+        s.forEach((item) => {
+            if (item.tenMatHang === tenSanPham) {
+                 dGia = (item.donGia / item.soLuong) * sluong;
+                 if(item.loai === "Nhập" && c===0) {
+                    sl = item.soLuong - sluong;
+                    dg = item.donGia - dGia;
+                    ncc = item.nhaCungCap;
+                    nn = item.ngayNhap;
+                    gc = item.ghiChu;
+                    c++;
+                    b=1;
+                 }
+            }
+        });
+        if(b===0) {
+            alert("Không có sản phẩm trong kho hàng")
+            return;
         }
+        if(ncc<ngayXuat) {
+            alert("Không có sản phẩm")
+            return;
+        }
+        if(c!==0) {
+            z.forEach((item,index)=> {
+                    let id = index;
+                    if(item.tenMatHang === tenSanPham ) {
+                        sl = item.soLuong - sluong;
+                        dg = item.donGia - dGia;
+                        ncc = item.nhaCungCap;
+                        nn = item.ngayNhap;
+                        gc = item.ghiChu;
+                        z.splice(id,1);
+                    }
+                    index++;
+                }
+            )
+        }
+        s.push(
+            {
+                loai: "Xuất",
+                tenMatHang: tenSanPham,
+                soLuong: sluong,
+                nhaCungCap: kHang,
+                donGia: dGia,
+                ngayNhap: ngayXuat,
+                ghiChu: ghiChu,
+            }
+        );
+        if(sl>0) {
+            alert("Xuất thành công");
+            z.push(
+            {
+                tenMatHang: tenSanPham,
+                soLuong: sl,
+                nhaCungCap: ncc,
+                donGia: dg,
+                ngayNhap: nn,
+                ghiChu: gc,
+            }
+        )
+        } else {
+            alert("Sản phẩm không đủ")
+            return;
+        }
+        
+        localStorage.setItem('s', JSON.stringify(s));
+        localStorage.setItem('z', JSON.stringify(z));
+        this.renderListProduct();
     }
-
-    if (index === -1) {
-        alert("Sản phẩm không tồn tại");
-        return;
-    }
-
-    if (tonKho[index].soLuong < soLuong) {
-        alert("Số lượng sản phẩm trong kho không đủ");
-        return;
-    }
-
-    const donGia = tonKho[index].donGia;
-
-    tonKho[index].soLuong -= soLuong;
-
-    if (tonKho[index].soLuong === 0) {
-        tonKho.splice(index, 1);
-    }
-
-    nhapXuatList.push({
-        loai: "Xuất",
-        tenMatHang: tenSanPham,
-        soLuong: soLuong,
-        nhaCungCap_KhachHang: "Khách hàng A", // Điều chỉnh thông tin khách hàng nếu cần
-        donGia: donGia,
-        ngay: ngayXuat,
-        ghiChu: ghiChu
-    });
-
-    capNhatBangTonKho();
-    capNhatBangNhapXuat();
-    document.getElementById("exportForm").reset();
 }
-
-// Khởi tạo bảng nhập/xuất và tồn kho khi trang tải
-capNhatBangNhapXuat();
-capNhatBangTonKho();
