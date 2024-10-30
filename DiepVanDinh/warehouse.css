@@ -1,9 +1,31 @@
-body{  
-    background-color: #f0f0f0; /* Màu nền mặc định */  
-    background-repeat: no-repeat; /* Không lặp lại */  
-    background-size: cover;
-    background: url(./imagewarehouse/—Pngtree—3d\ render\ of\ warehouse\ interior_7229824.jpg);
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  .carousel-item img {
+    width: 100%;         
+    height: 500px;      
+    object-fit: cover;    
+    margin: 20px auto;      
+  }
+  
+  .carousel {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+footer.container{
+    color: #d3d3d3;
 }
+footer p{
+    text-align: center;
+    
+}  
+
 .dark-mode {
     background-color: #333; /* Màu nền tối */
     color: #fff; /* Màu chữ sáng */
