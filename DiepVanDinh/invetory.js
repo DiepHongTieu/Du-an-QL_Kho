@@ -72,6 +72,7 @@ function xuatKho() {
     const soLuong = parseInt(document.getElementById("exportQuantity").value);
     const ngayXuat = document.getElementById("exportDate").value;
     const ghiChu = document.getElementById("exportNote").value;
+    
 
     let index = -1;
 

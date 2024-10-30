@@ -1,17 +1,10 @@
 // script.js
-// ... (các biến và hàm khác)
-
-
 
 let khachHangTrongNuoc = [];
 let khachHangNuocNgoai = [];
 let khachHangNoiBo = [];
 
-
-
 let tonKho = [];
-
-
 
 function taoBaoCao() {
 
@@ -57,25 +50,13 @@ function taoBaoCao() {
     const soLuongKhachHangNoiBoValueCell = soLuongKhachHangNoiBoRow.insertCell();
     soLuongKhachHangNoiBoValueCell.textContent = khachHangNoiBo.length;
 
-
-
-
-
     const reportSection = document.getElementById("reportSection")
-
 
     reportSection.innerHTML = '';
     reportSection.appendChild(baoCaoTable);
 
-
-
-
 }
 
-
-
-
 document.addEventListener('DOMContentLoaded', () => {
-
     taoBaoCao();
 });
