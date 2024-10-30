@@ -1,17 +1,10 @@
 // script.js
-// ... (các biến và hàm khác)
-
-
 
 let khachHangTrongNuoc = [];
 let khachHangNuocNgoai = [];
 let khachHangNoiBo = [];
 
-
-
 let tonKho = [];
-
-
 
 function taoBaoCao() {
 
@@ -57,18 +50,10 @@ function taoBaoCao() {
     const soLuongKhachHangNoiBoValueCell = soLuongKhachHangNoiBoRow.insertCell();
     soLuongKhachHangNoiBoValueCell.textContent = khachHangNoiBo.length;
 
-
-
-
-
     const reportSection = document.getElementById("reportSection")
-
 
     reportSection.innerHTML = '';
     reportSection.appendChild(baoCaoTable);
-
-
-
 
 }
 function renderChart() {
@@ -77,7 +62,6 @@ function renderChart() {
 
     let labels = z.map(item => item.tenMatHang);
     let data = z.map(item => item.soLuong);
-
 
     var ctx = document.getElementById('myChart').getContext('2d');
     var myChart = new Chart(ctx, {
@@ -144,3 +128,6 @@ let dataa = [trongNuocCount, ngoaiNuocCount, noiBoCount];
         }
     });
 }
+document.addEventListener('DOMContentLoaded', () => {
+    taoBaoCao();
+});

@@ -143,6 +143,18 @@ function xuatKho() {
         if(b===0) {
             alert("Không có sản phẩm trong kho hàng")
             return;
+    const tenSanPham = document.getElementById("exportProduct").value;
+    const soLuong = parseInt(document.getElementById("exportQuantity").value);
+    const ngayXuat = document.getElementById("exportDate").value;
+    const ghiChu = document.getElementById("exportNote").value;
+    
+
+    let index = -1;
+
+    for (let i = 0; i < tonKho.length; i++) {
+        if (tonKho[i].tenMatHang === tenSanPham) {
+            index = i;
+            break;
         }
         if(ncc<ngayXuat) {
             alert("Không có sản phẩm")
