@@ -59,7 +59,7 @@ footer p{
     color: aqua;
     border-color: #ccc;
   }
-  .dark-mode h1.loc{
+  .dark-mode div.loc h1,h2,h3,p{
     color: #444;
   }
   /* The switch - the box around the slider */
