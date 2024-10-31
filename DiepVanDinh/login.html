@@ -6,6 +6,8 @@
     <title>Login</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- <link rel="stylesheet" href="login.css">  Your CSS file -->
+    <link rel="stylesheet" href="inventory.css">
+    <link rel="stylesheet" href="styleall.css">
     <script src="checkvalid.js"></script>
 </head>
 <body>
@@ -13,7 +15,7 @@
         <a href="warehousemain.html" class="btn btn-outline-primary me-2" style="margin: 10px 20px;">Trở về trang chủ</a>
     </div>
     <div class="container">
-        <form class="register-form" method="post" action="#">  <!-- Replace '#' with your server-side script -->
+        <form class="register-form" method="post" action="#" onsubmit="return validLogin(this);">
             <h2>Đăng nhập</h2>
             <div class="form-group">
                 <label for="email-phone">Email/Số điện thoại:</label>
@@ -26,6 +28,7 @@
             <button type="submit" class="btn btn-primary login-button">Đăng nhập</button>
             <p class="login-link">Bạn chưa có tài khoản? <a href="register.html">Đăng ký</a></p>
         </form>
+        
     </div>
 </body>
 </html>
