@@ -10,6 +10,7 @@
 
 </head>
 <body>
+
     <!-- Khong dung lo go nua -->
     <!-- Header with Logo -->
     <!-- <div class="container-fluid py-3">
@@ -28,7 +29,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="#">Tổng quan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="warehousemain.html">Tổng quan</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="customerDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Khách hàng</a>
                         <ul class="dropdown-menu" aria-labelledby="customerDropdown">
@@ -57,12 +58,29 @@
                 </ul>
                 <div class="d-flex ms-auto">
                     <!-- Register / Login Buttons -->
-                    <a href="register.html" class="btn btn-outline-primary me-2">Đăng ký</a>
-                    <a href="login.html" class="btn btn-outline-secondary">Đăng nhập</a>
+                    <a href="warehousemain.html" class="btn btn-outline-primary me-2">Đăng xuất</a>
                 </div>
             </div>
         </div>
     </nav>
+    <h1>Nhân viên</h1>
+
+
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation" href="dsnv.html">
+            <button class="nav-link active" id="import-tab" data-bs-toggle="tab" data-bs-target="#importSection"
+                type="button" role="tab" aria-controls="importSection" aria-selected="true">Danh sách nhân viên</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="export-tab" data-bs-toggle="tab" data-bs-target="#exportSection" type="button"
+                role="tab" aria-controls="exportSection" aria-selected="false">Phân quyền</button>
+        </li>
+ 
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="inventory-tab" data-bs-toggle="tab" data-bs-target="#inventorySection"
+                type="button" role="tab" aria-controls="inventorySection" aria-selected="false">Chấm công</button>
+        </li>
+    </ul>
     <div class="container">
         <h1>Chấm Công</h1>
         <form id="attendance-form">

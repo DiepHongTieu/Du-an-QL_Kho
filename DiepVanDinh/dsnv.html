@@ -10,6 +10,7 @@
 </head>
 <body>
     <header>
+
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">   
                 <a class="navbar-brand" href="./warehousemain.html">Warehouse</a>
@@ -53,7 +54,22 @@
             </div>
         </nav>
             </header>
-        
+            <h1>Nhân viên</h1>
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation" href="dsnv.html">
+                    <button class="nav-link active" id="import-tab" data-bs-toggle="tab" data-bs-target="#importSection"
+                        type="button" role="tab" aria-controls="importSection" aria-selected="true">Danh sách nhân viên</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="export-tab" data-bs-toggle="tab" data-bs-target="#exportSection" type="button"
+                        role="tab" aria-controls="exportSection" aria-selected="false">Phân quyền</button>
+                </li>
+         
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="inventory-tab" data-bs-toggle="tab" data-bs-target="#inventorySection"
+                        type="button" role="tab" aria-controls="inventorySection" aria-selected="false">Chấm công</button>
+                </li>
+            </ul>
     <div class="container">
         <h1>Danh Sách Nhân Viên</h1>
         <table id="employee-table">

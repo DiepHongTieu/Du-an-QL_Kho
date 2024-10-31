@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phân Quyền và Vai Trò</title>
     <link rel="stylesheet" href="phanquyenvavaitro.css">
-    <link rel="stylesheet" href="styleall.css">
     <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
 </head>
 <body>
@@ -53,7 +52,24 @@
             </div>
         </nav>
             </header>
-        
+            <h1>Nhân viên</h1>
+
+
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation" href="dsnv.html">
+                <button class="nav-link active" id="import-tab" data-bs-toggle="tab" data-bs-target="#importSection"
+                    type="button" role="tab" aria-controls="importSection" aria-selected="true">Danh sách nhân viên</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="export-tab" data-bs-toggle="tab" data-bs-target="#exportSection" type="button"
+                    role="tab" aria-controls="exportSection" aria-selected="false">Phân quyền</button>
+            </li>
+     
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="inventory-tab" data-bs-toggle="tab" data-bs-target="#inventorySection"
+                    type="button" role="tab" aria-controls="inventorySection" aria-selected="false">Chấm công</button>
+            </li>
+        </ul>
     <div class="container">
         <h1>Phân Quyền và Vai Trò</h1>
         <form id="role-form">
