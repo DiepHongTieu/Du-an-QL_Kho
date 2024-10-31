@@ -25,24 +25,23 @@ footer p{
     text-align: center;
     
 }  
-
+/*thay đổi màu chữ và nền khi dark mode*/
 .dark-mode {
-    background-color: #333; /* Màu nền tối */
-    color: #fff; /* Màu chữ sáng */
+    background-color: #333;
+    color: #fff; 
   }
-  
   .dark-mode .bg-light {
-    background-color: #444; /* Thay đổi màu bg-light trong chế độ tối */
+    background-color: #444;
   }
   
   .dark-mode .text-bg-dark {
-    background-color: #222; /* Thay đổi màu text-bg-dark trong chế độ tối */
+    background-color: #222;
   }
   .dark-mode .text-bg-primary {
-    background-color: #111; /* Thay đổi màu text-bg-primary trong chế độ tối */
+    background-color: #111;
   }
   .dark-mode .bg-body-tertiary {
-    background-color: #444; /* Thay đổi màu bg-body-tertiary trong chế độ tối */
+    background-color: #444;
   }
   .dark-mode a.link-secondary {
       color: #ffffff;
@@ -55,6 +54,13 @@ footer p{
   .dark-mode .btn-outline-secondary{
       color: #f3f3f3;
       border-color: #fff;
+  }
+  .dark-mode a.btn{
+    color: aqua;
+    border-color: #ccc;
+  }
+  .dark-mode h1.loc{
+    color: #444;
   }
   /* The switch - the box around the slider */
 .switch {
