@@ -14,9 +14,8 @@ function nhapKho() {
     let ghiChu = document.getElementById("importNote").value;
     let loai;
     
-    document.getElementById('importForm').reset();
-    
-    if(tenSanPham && soLuong && nhaCungCap && donGia && ngayNhap && ghiChu) {
+    if(tenSanPham && soLuong && nhaCungCap && donGia && ngayNhap) {
+        document.getElementById('importForm').reset();
         alert("Nhập thành công ");
         let s = localStorage.getItem('s') ? JSON.parse(localStorage.getItem('s')) : [];
         let z = localStorage.getItem('z') ? JSON.parse(localStorage.getItem('z')) : [];
@@ -44,6 +43,10 @@ function nhapKho() {
         localStorage.setItem('s', JSON.stringify(s));
         localStorage.setItem('z', JSON.stringify(z));
         this.renderListProduct();
+    } else{
+        alert("Không được bỏ trống");
+        return;
+
     }
 
 }
