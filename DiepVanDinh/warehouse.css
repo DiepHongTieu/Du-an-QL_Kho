@@ -62,6 +62,10 @@ footer p{
   .dark-mode div.loc h1,h2,h3,p{
     color: #444;
   }
+.dark-mode.hieu{
+  background-color: #111;
+
+}
   /* The switch - the box around the slider */
 .switch {
   position: relative;
