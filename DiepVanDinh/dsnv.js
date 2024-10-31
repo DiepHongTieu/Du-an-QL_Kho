@@ -1,37 +1,37 @@
 const employees = [
     {
         name: "Hồ Nguyên Long",
-        position: "con",
+        position: "thành viên",
         phone: "0123456798",
-        email: "longngu123@gmail.com",
+        email: "long231220828@lms.utc.edu.vn",
         status: "đang công tác"
     },
     {
         name: "Ngô Xuân Lộc",
-        position: "bố",
+        position: "quản lý",
         phone: "0363019293",
         email: "ngoxuanloc1010@gmail.com",
-        status: "đang công tác"
+        status: "đang làm"
     },
     {
         name: "Đinh Văn Điệp",
-        position: "con",
+        position: "thành viên",
         phone: "0968244212",
         email: "DiepHongTieu@gmail.com",
-        status: "đang thẩm"
+        status: "đang làm"
     },
     {
         name: "Hoàng Bá Ngọc",
-        position: "con",
+        position: "thành viên",
         phone: "0936904325",
-        email: "contao@gmail.com",
+        email: "ngoc231230854@lms.utc.edu.vn",
         status: "đang công tác"
     },
     {
         name: "Nguyễn Phúc Hiếu",
-        position: "con",
+        position: "thành viên",
         phone: "0966598528",
-        email: "abcxyz@gmai.com",
+        email: "nguyenphuchieu@gmail.com",
         status: "đang công tác"
     }
 ];

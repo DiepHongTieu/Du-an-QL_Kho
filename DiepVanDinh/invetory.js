@@ -122,7 +122,7 @@ function xuatKho() {
     let gc;
     let b=0;
     
-    if(tenSanPham && sluong && kHang && ngayXuat && ghiChu) {
+    if(tenSanPham && sluong && kHang && ngayXuat ) {
         document.getElementById('exportForm').reset();
         
         let s = localStorage.getItem('s') ? JSON.parse(localStorage.getItem('s')) : [];
