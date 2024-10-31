@@ -46,7 +46,6 @@ function nhapKho() {
     } else{
         alert("Không được bỏ trống");
         return;
-
     }
 
 }
@@ -123,9 +122,8 @@ function xuatKho() {
     let gc;
     let b=0;
     
-    document.getElementById('exportForm').reset();
-    
     if(tenSanPham && sluong && kHang && ngayXuat && ghiChu) {
+        document.getElementById('exportForm').reset();
         
         let s = localStorage.getItem('s') ? JSON.parse(localStorage.getItem('s')) : [];
         let z = localStorage.getItem('z') ? JSON.parse(localStorage.getItem('z')) : [];
@@ -189,12 +187,15 @@ function xuatKho() {
             }
         )
         } else {
-            alert("Sản phẩm không đủ")
+            alert("Không đủ hàng hóa")
             return;
         }
         
         localStorage.setItem('s', JSON.stringify(s));
         localStorage.setItem('z', JSON.stringify(z));
         this.renderListProduct();
+    } else{
+        alert("Không được bỏ trống");
+        return;
     }
 }
