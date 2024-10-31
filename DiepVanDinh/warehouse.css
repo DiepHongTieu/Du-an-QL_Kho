@@ -25,6 +25,22 @@ footer p{
     text-align: center;
     
 }  
+.dark-mode main {
+  background-color: #333; /* Đặt nền đen */
+  color: #f5f5f5; /* Đổi màu chữ để dễ nhìn */
+}
+
+/* Điều chỉnh màu của các thẻ con trong main */
+.dark-mode main .bg-body-tertiary {
+  background-color: #333 !important;
+}
+
+.dark-mode main h1, 
+.dark-mode main h2, 
+.dark-mode main h3,
+.dark-mode main p {
+  color: #f5f5f5; /* Màu chữ sáng hơn cho dark mode */
+}
 /*thay đổi màu chữ và nền khi dark mode*/
 .dark-mode {
     background-color: #333;
@@ -60,7 +76,7 @@ footer p{
     border-color: #ccc;
   }
   .dark-mode h1.loc{
-    color: #444;
+    color: #fff;
   }
   /* The switch - the box around the slider */
 .switch {
