@@ -72,17 +72,20 @@ footer p{
       border-color: #fff;
   }
   .dark-mode a.btn{
-    color: aqua;
+    color: rgb(59, 17, 42);
     border-color: #ccc;
   }
   .dark-mode h1.loc{
     color: #fff;
   }
+<<<<<<< Updated upstream
 
 .dark-mode.hieu{
   background-color: #111;
 
 }
+=======
+>>>>>>> Stashed changes
   /* The switch - the box around the slider */
 .switch {
   position: relative;
@@ -91,8 +94,6 @@ footer p{
   height: 34px;
   
 }
-
-
 /* Hide default HTML checkbox */
 .switch input {
   opacity: 0;
