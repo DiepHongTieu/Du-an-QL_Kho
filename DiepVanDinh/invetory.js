@@ -122,25 +122,30 @@ function xuatKho() {
     let gc;
     let b=0;
     
+
     if(tenSanPham && sluong && kHang && ngayXuat ) {
         document.getElementById('exportForm').reset();
-        
         let s = localStorage.getItem('s') ? JSON.parse(localStorage.getItem('s')) : [];
         let z = localStorage.getItem('z') ? JSON.parse(localStorage.getItem('z')) : [];
-        s.forEach((item) => {
-            if (item.tenMatHang === tenSanPham) {
-                 dGia = (item.donGia / item.soLuong) * sluong;
-                 if(item.loai === "Nhập" && c===0) {
-                    sl = item.soLuong - sluong;
-                    dg = item.donGia - dGia;
-                    ncc = item.nhaCungCap;
-                    nn = item.ngayNhap;
-                    gc = item.ghiChu;
-                    c++;
-                    b=1;
-                 }
-            }
-        });
+        
+            z.forEach((item,index)=> {
+                    let id = index;
+                    if(item.tenMatHang === tenSanPham ) {
+                        dGia = (item.donGia / item.soLuong) * sluong;
+                        sl = item.soLuong - sluong;
+                        dg = item.donGia - dGia;
+                        ncc = item.nhaCungCap;
+                        nn = item.ngayNhap;
+                        gc = item.ghiChu;
+                        z.splice(id,1);
+                        b=1;
+                        
+                        return;
+                    }
+                    index++;
+                }
+            )
+        
         if(b===0) {
             alert("Không có sản phẩm trong kho hàng")
             return;}
@@ -148,21 +153,7 @@ function xuatKho() {
             alert("Không có sản phẩm")
             return;
         }
-        if(c!==0) {
-            z.forEach((item,index)=> {
-                    let id = index;
-                    if(item.tenMatHang === tenSanPham ) {
-                        sl = item.soLuong - sluong;
-                        dg = item.donGia - dGia;
-                        ncc = item.nhaCungCap;
-                        nn = item.ngayNhap;
-                        gc = item.ghiChu;
-                        z.splice(id,1);
-                    }
-                    index++;
-                }
-            )
-        }
+        
         s.push(
             {
                 loai: "Xuất",
@@ -186,10 +177,21 @@ function xuatKho() {
                 ghiChu: gc,
             }
         )
-        } else {
-            alert("Không đủ hàng hóa")
-            return;
+       }
+       z.forEach((item,index)=> {
+        let id = index;
+        if(sl===0) {
+            z.splice(id,1);
+            alert("Xuất thành công");
         }
+        index++;
+    }
+)
+        if(s<0){
+        alert("Không đủ hàng hóa")
+        return;
+       }
+        document.getElementById('exportForm').reset();
         
         localStorage.setItem('s', JSON.stringify(s));
         localStorage.setItem('z', JSON.stringify(z));
