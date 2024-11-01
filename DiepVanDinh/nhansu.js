@@ -1,34 +1,38 @@
-const attendanceRecords = [];
-
-// Hàm chấm công
-function checkIn() {
-    const employeeName = document.getElementById("employee-name").value;
-    const currentTime = new Date().toLocaleString();
-
-    // Thêm dữ liệu chấm công vào mảng
-    attendanceRecords.push({ name: employeeName, time: currentTime });
-
-    // Cập nhật bảng chấm công
-    updateAttendanceTable();
+// Hàm để lấy thời gian hiện tại dưới dạng định dạng ngày/giờ
+function getCurrentTime() {
+    const now = new Date();
+    const day = String(now.getDate()).padStart(2, '0');
+    const month = String(now.getMonth() + 1).padStart(2, '0'); // Tháng bắt đầu từ 0
+    const year = now.getFullYear();
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    return `${day}/${month}/${year} ${hours}:${minutes}`;
 }
 
-// Hàm cập nhật bảng chấm công
-function updateAttendanceTable() {
-    const attendanceBody = document.getElementById("attendance-body");
-    attendanceBody.innerHTML = ""; // Xóa nội dung cũ
+// Hàm để chấm công khi bấm nút "Chấm Công"
+function checkIn() {
+    // Lấy phần tử select trong form chấm công
+    const attendanceForm = document.getElementById("attendance-form");
+    const employeeSelect = attendanceForm.querySelector("select"); // Lấy phần tử <select> trong form
 
-    // Lặp qua danh sách chấm công và hiển thị
-    attendanceRecords.forEach(record => {
-        const row = document.createElement("tr");
+    const selectedEmployee = employeeSelect.value; // Lấy giá trị của nhân viên đã chọn
 
-        const nameCell = document.createElement("td");
-        nameCell.textContent = record.name;
+    if (selectedEmployee) {
+        const checkInTime = getCurrentTime(); // Lấy thời gian chấm công hiện tại
 
-        const timeCell = document.createElement("td");
-        timeCell.textContent = record.time;
+        // Tạo một hàng mới trong bảng lịch sử chấm công
+        const attendanceTable = document.getElementById("attendance-body");
+        const newRow = attendanceTable.insertRow();
 
-        row.appendChild(nameCell);
-        row.appendChild(timeCell);
-        attendanceBody.appendChild(row);
-    });
+        // Tạo ô cho tên nhân viên và thời gian chấm công
+        const nameCell = newRow.insertCell(0);
+        const timeCell = newRow.insertCell(1);
+        nameCell.textContent = selectedEmployee;
+        timeCell.textContent = checkInTime;
+
+        // Hiển thị thông báo chấm công thành công
+        alert(`Chấm công thành công cho ${selectedEmployee} lúc ${checkInTime}`);
+    } else {
+        alert("Vui lòng chọn một nhân viên để chấm công.");
+    }
 }

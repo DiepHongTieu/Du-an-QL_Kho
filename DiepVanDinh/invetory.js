@@ -122,25 +122,12 @@ function xuatKho() {
     let gc;
     let b=0;
     
-    if(tenSanPham && sluong && kHang && ngayXuat) {
-        
+
+    if(tenSanPham && sluong && kHang && ngayXuat ) {
+        document.getElementById('exportForm').reset();
         let s = localStorage.getItem('s') ? JSON.parse(localStorage.getItem('s')) : [];
         let z = localStorage.getItem('z') ? JSON.parse(localStorage.getItem('z')) : [];
-        // z.forEach((item) => {
-        //     if (item.tenMatHang === tenSanPham) {
-        //          dGia = (item.donGia / item.soLuong) * sluong;
-        //          if( c===0) {
-        //             // sl = item.soLuong - sluong;
-        //             // dg = item.donGia - dGia;
-        //             // ncc = item.nhaCungCap;
-        //             // nn = item.ngayNhap;
-        //             // gc = item.ghiChu;
-        //             c++;
-        //          }
-        //          b=1;
-        //          return;
-        //     }
-        // });
+        
             z.forEach((item,index)=> {
                     let id = index;
                     if(item.tenMatHang === tenSanPham ) {

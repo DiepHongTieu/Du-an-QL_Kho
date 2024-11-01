@@ -25,24 +25,39 @@ footer p{
     text-align: center;
     
 }  
+.dark-mode main {
+  background-color: #333; /* Đặt nền đen */
+  color: #f5f5f5; /* Đổi màu chữ để dễ nhìn */
+}
 
+/* Điều chỉnh màu của các thẻ con trong main */
+.dark-mode main .bg-body-tertiary {
+  background-color: #333 !important;
+}
+
+.dark-mode main h1, 
+.dark-mode main h2, 
+.dark-mode main h3,
+.dark-mode main p {
+  color: #f5f5f5; /* Màu chữ sáng hơn cho dark mode */
+}
+/*thay đổi màu chữ và nền khi dark mode*/
 .dark-mode {
-    background-color: #333; /* Màu nền tối */
-    color: #fff; /* Màu chữ sáng */
+    background-color: #333;
+    color: #fff; 
   }
-  
   .dark-mode .bg-light {
-    background-color: #444; /* Thay đổi màu bg-light trong chế độ tối */
+    background-color: #444;
   }
   
   .dark-mode .text-bg-dark {
-    background-color: #222; /* Thay đổi màu text-bg-dark trong chế độ tối */
+    background-color: #222;
   }
   .dark-mode .text-bg-primary {
-    background-color: #111; /* Thay đổi màu text-bg-primary trong chế độ tối */
+    background-color: #111;
   }
   .dark-mode .bg-body-tertiary {
-    background-color: #444; /* Thay đổi màu bg-body-tertiary trong chế độ tối */
+    background-color: #444;
   }
   .dark-mode a.link-secondary {
       color: #ffffff;
@@ -56,6 +71,18 @@ footer p{
       color: #f3f3f3;
       border-color: #fff;
   }
+  .dark-mode a.btn{
+    color: aqua;
+    border-color: #ccc;
+  }
+  .dark-mode h1.loc{
+    color: #fff;
+  }
+
+.dark-mode.hieu{
+  background-color: #111;
+
+}
   /* The switch - the box around the slider */
 .switch {
   position: relative;
