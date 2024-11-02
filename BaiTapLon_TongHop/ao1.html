@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quần què</title>
+    <link rel="stylesheet" href="aoquan.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="test1.html"><img src="logokho.jpg" alt="Khong hien thi" class="logo-img"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="test1.html" class="home">Home</a></li>
+                <li><a href="sanpham.html">Sản phẩm</a></li>
+                <li><a href="donhang.html">Đơn hàng</a></li>
+                <li><a href="giohang.html">Giỏ hàng</a></li>
+                <li><a href="thanhtoan.html">Thanh toán</a></li>
+                <li><a href="support.html">Hỗ trợ khách hàng</a></li>
+            </ul>
+        </nav>
+        <nav>
+            <div class="loginregister">
+                <a href="register.html"> <button class="register-button">Đăng ký</button></a>
+                <a href="login.html"><button class="login-button">Đăng nhập</button></a>
+            </div>
+        </nav>
+    </header>
+    <main class="product-detail">
+        <div class="product-image1">
+            <img src="aoquan/ao1.jpg" alt="Product Image">
+        </div>
+        <div class="product-info">
+            <h2 class="product-name1">Quần vải rộng</h2>
+            <p class="product-price1">$29.99</p>
+            <div class="product-options">
+                <label for="size">Size:</label>
+                <select id="size" name="size">
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                </select>
+
+                <label for="color">Màu sắc:</label>
+                <select id="color" name="color">
+                    <option value="red">Đỏ</option>
+                    <option value="blue">Xanh dương</option>
+                    <option value="green">Xanh lá</option>
+                    <option value="black">Đen</option>
+                </select>
+
+                <label for="quantity">Số lượng:</label>
+                <input type="number" id="quantity" name="quantity" value="1" min="1" max="100">
+            </div>
+            <button class="order-button">Đặt hàng</button>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Warehouse Management. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

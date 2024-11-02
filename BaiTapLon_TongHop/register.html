@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="inventory.css">
+    <script src="checkvalid.js"></script>
+    <link rel="stylesheet" href="styleall.css">
+</head>
+<body>
+    <div class="d-flex ms-auto">
+        <a href="warehousemain.html" class="btn btn-outline-primary me-2" style="margin: 10px 20px;">Trở về trang chủ</a>
+    </div>
+    <div class="container">
+        <form class="register-form" onsubmit="return validform(this)" method="post" action="#"> <!-- Replace '#' with your server-side script -->
+            <h2>Đăng ký</h2>
+            <div class="form-group">
+                <label for="fullname">Họ và tên:</label>
+                <input type="text" class="form-control" id="fullname" name="fullname" placeholder="Enter full name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Số điện thoại:</label>
+                <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter phone number" required>
+            </div>
+            <div class="form-group">
+                <label>Giới tính:</label><br>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Nam</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Nữ</label>
+            </div>
+            <div class="form-group">
+                <label for="age">Tuổi:</label>
+                <input type="text" class="form-control" id="age" name="age" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Mật khẩu:</label>
+                <input type="password" class="form-control" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Xác nhận mật khẩu:</label>
+                <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required>
+            </div>
+            <button type="submit" class="btn btn-primary register-button">Đăng ký</button>
+            <p class="register-link">Bạn đã có tài khoản rồi? <a href="login.html">Đăng nhập</a></p>
+        </form>
+    </div>
+</body>
+</html>
