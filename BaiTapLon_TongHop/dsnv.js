@@ -2,7 +2,7 @@ const employees = [
     {
         name: "Hồ Nguyên Long",
         position: "thành viên",
-        phone: "0123456798",
+        phone: "0944126799",
         email: "long231220828@lms.utc.edu.vn",
         status: "đang công tác"
     },
