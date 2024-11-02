@@ -16,15 +16,15 @@ const employees = [
     {
         name: "Đinh Văn Điệp",
         position: "thành viên",
-        phone: "0968244212",
+        phone: "0231312123",
         email: "DiepHongTieu@gmail.com",
         status: "đang làm"
     },
     {
         name: "Hoàng Bá Ngọc",
         position: "thành viên",
-        phone: "0936904325",
-        email: "ngoc231230854@lms.utc.edu.vn",
+        phone: "0123123123",
+        email: "ngoc231230124@lms.utc.edu.vn",
         status: "đang công tác"
     },
     {
