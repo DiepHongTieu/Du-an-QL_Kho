@@ -121,7 +121,7 @@ footer {
 /*Slide show*/
 .slideshow-container {
     position: relative;
-    max-width: 960px;
+    max-width: 65%;
     margin: auto;
     background-color: #fff;
     border-radius: 10px;
